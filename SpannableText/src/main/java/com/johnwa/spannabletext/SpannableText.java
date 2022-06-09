@@ -43,6 +43,21 @@ public class SpannableText {
      * 设置参数
      *
      * @param textContent 文字内容
+     * @param target 目标字符
+     * @param url 目标字符链接
+     * */
+    public void setParam(String textContent, String target, String url){
+        int start = textContent.indexOf(target);
+        int end = start + target.length();
+        ClickTextSpan textSpan = new ClickTextSpan(url);
+        stringBuilder.setSpan(textSpan, start, end , Spannable.SPAN_EXCLUSIVE_INCLUSIVE);
+        stringBuilder.append(textContent);
+    }
+
+    /**
+     * 设置参数
+     *
+     * @param textContent 文字内容
      * @param target1 目标字符
      * @param target2 目标字符
      * @param url1 目标字符1的链接
@@ -55,9 +70,9 @@ public class SpannableText {
         int end2 = start2 + target2.length();
         ClickTextSpan textSpan1 = new ClickTextSpan(url1);
         ClickTextSpan textSpan2 = new ClickTextSpan(url2);
-        stringBuilder.append(textContent);
         stringBuilder.setSpan(textSpan1, start1, end1 , Spannable.SPAN_EXCLUSIVE_INCLUSIVE);
         stringBuilder.setSpan(textSpan2, start2, end2 , Spannable.SPAN_EXCLUSIVE_INCLUSIVE);
+        stringBuilder.append(textContent);
     }
 
     /**
