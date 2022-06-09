@@ -5,6 +5,7 @@ package com.johnwa.spannabletext;
  * @Date: 2022/6/9
  * @Description:
  */
-public interface IEventListener {
-    void onClickEvent(String url);
+public interface ITextListener {
+
+    void onClickText(String url);
 }

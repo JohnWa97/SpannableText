@@ -20,7 +20,7 @@ import androidx.annotation.NonNull;
 public class SpannableText {
 
     private SpannableStringBuilder stringBuilder;
-    private IEventListener mListener;
+    private ITextListener mListener;
     private Context mContext;
     private boolean mUnderLine;
     private int mColor;
@@ -31,7 +31,7 @@ public class SpannableText {
      * @param context 上下文
      * @param listener 点击监听
      * */
-    public SpannableText(Context context, IEventListener listener){
+    public SpannableText(Context context, ITextListener listener){
         stringBuilder = new SpannableStringBuilder();
         mContext = context;
         mListener = listener;
@@ -91,7 +91,7 @@ public class SpannableText {
 
         @Override
         public void onClick(@NonNull View view) {
-            mListener.onClickEvent(mUrl);
+            mListener.onClickText(mUrl);
         }
 
         @Override
