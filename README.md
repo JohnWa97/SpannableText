@@ -100,4 +100,4 @@ public class MainActivity extends AppCompatActivity implements ITextListener {
 
 #### 3.效果示例
 
-![image](https://raw.githubusercontent.com/JohnWa97/SpannableText/master/GIF.gif)
+![](https://raw.githubusercontent.com/JohnWa97/SpannableText/master/GIF.gif)
